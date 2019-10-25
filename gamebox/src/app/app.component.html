@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Welcome to GameBox!</h1>
+  <h4>Round {{ round }}: Please select a box.</h4>
+  <mat-grid-list cols="3" rowHeight="100px">
+    <mat-grid-tile *ngFor="let box of boxes" (click)="clicked(box)" [style.background]="box.color" [@fadeInOut]></mat-grid-tile>
+  </mat-grid-list>  
+</div>

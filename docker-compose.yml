@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  gamebox:
+    image: node:10.14.1-alpine
+    ports:
+      - '4600:80' # Open port 8000 on server
+    volumes:
+      - .:/app:rw
+    entrypoint:
+      - sh
+      - /app/entrypoint.sh
+    environment:
+      - NODE_ENV=dev
