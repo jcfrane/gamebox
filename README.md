@@ -1,8 +1,8 @@
 ## Running the app with docker
 
-```
-\\ from project root run the ff:
+From project root run the ff:
 
+```
 docker-compose up -d --build
 ```
 
@@ -12,8 +12,8 @@ Go to **localhost:4600**.
 
 ## Checking logs
 
-```
-`` from project root run the ff:
+From Project root run the ff:
 
+```
 docker-compose logs -f gamembox
 ```
