@@ -4,11 +4,22 @@ services:
   gamebox:
     image: node:10.14.1-alpine
     ports:
-      - '4600:80' # Open port 8000 on server
+      - '4600:80'
     volumes:
       - .:/app:rw
     entrypoint:
       - sh
       - /app/entrypoint.sh
+    environment:
+      - NODE_ENV=dev
+  gamebox-react:
+    image: node:10.14.1-alpine
+    ports:
+      - '4700:3000'
+    entrypoint:
+      - sh
+      - /app/entrypoint-react.sh
+    volumes:
+      - .:/app:rw
     environment:
       - NODE_ENV=dev
